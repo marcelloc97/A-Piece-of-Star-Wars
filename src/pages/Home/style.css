@@ -50,7 +50,7 @@
   top: 99999px;
   opacity: 0;
   transform-origin: 50% 100%;
-  animation: crawl 60s linear 14s;
+  animation: crawl 60s linear 13s;
 }
 
 .crawl > .title {
