@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import calculateShipCapacity from "../../utils/calculateShipCapacity";
 
@@ -7,13 +7,15 @@ import logo from "../../assets/logo.svg";
 import "./style.css";
 
 export default function Story({ history }) {
+  const [shipCapacity, setShipCapacity] = useState(0); // gets calculated ship actual capacity
+
   // calls useEffect to load and calculate ship actual capacity
   useEffect(() => {
     // get the state from history.location.state
     let state = history.location.state;
 
     // calls the calculateShipCapacity function passing state as parameter
-    calculateShipCapacity(state);
+    setShipCapacity(calculateShipCapacity(state)); // set it to shipCapacity
   }, [history.location.state]); // here, the useEffect Hook updates everytime history.location.state is changed
 
   return (
@@ -45,31 +47,64 @@ export default function Story({ history }) {
             <h1>DESAFIO MERCADOU</h1>
           </div>
           <p>
-            {history.location.state.apiData.hanSolo.name} está pilotando a nave{" "}
-            {history.location.state.apiData.millFalcon.name} com capacidade de
-            carca de {history.location.state.apiData.millFalcon.cargo_capacity}
-            kg. Neste momento, sua capacidade está ocupada em 99%. Sua
-            necessidade em passar nos planetas, torna a viagem mais cansativa.
+            É um período de guerra civil. Espaçonaves rebeldes, vindos de uma
+            base escondida, tiveram sua primeira vitória contra o Império
+            Galático do mal.
           </p>
+          <br />
+          <p>
+            Durante a batalha, rebeldes espiam controlados para roubar os planos
+            secretos da arma suprema do Império, a ESTRELA DA MORTE, uma estação
+            espacial blindada com poder suficiente para destruir um planeta
+            inteiro....
+          </p>
+          <br />
+          <p>
+            Enquanto isso, {history.location.state.apiData.hanSolo.name} está
+            pilotando a nave {history.location.state.apiData.millFalcon.name}{" "}
+            com capacidade de carca de{" "}
+            {history.location.state.apiData.millFalcon.cargo_capacity}
+            kg. Sua capacidade atual está ocupada em 99%.
+          </p>
+          <br />
           <p>
             Em um certo momento, {history.location.state.apiData.hanSolo.name}{" "}
-            percebe que está próximo de um planeta conhecido. Lá pousará.
-          </p>
-          <p>
-            Ao pousar, ele decide embarcar{" "}
+            percebe que está próximo de um planeta conhecido. Muda seu curso em
+            direção ao mesmo. Ao pousar, decide embarcar{" "}
             {history.location.state.apiData.millFalcon.passengers} passageiros
             do filme {history.location.state.apiData.film.title} (Uma Nova
-            Esperança). Este 6º passageiro é alguém que é especial e que nunca
-            viajou em uma {history.location.state.apiData.millFalcon.name}.
+            Esperança). Este sexto passageiro é alguém especial.
           </p>
+          <br />
           <p>
-            {history.location.state.apiData.hanSolo.name} pergunta o nome do 6º
-            passageiro, e ele responde "{history.location.state.name}". Neste
-            momento, {history.location.state.apiData.hanSolo.name} fica
-            intrigado, porém o chama para o embarque junto com os outros 5
-            passageiros.
+            {history.location.state.apiData.hanSolo.name} pergunta o nome do
+            sexto passageiro que responde intitulando-se de{" "}
+            {history.location.state.name}.{" "}
+            {history.location.state.apiData.hanSolo.name} o convida à entrar.
+          </p>
+          <br />
+          <p>
+            Com o peso dos passageiros, a{" "}
+            {history.location.state.apiData.millFalcon.name} chegou a{" "}
+            {shipCapacity}kg.
+            {shipCapacity >
+              history.location.state.apiData.millFalcon.cargo_capacity &&
+              ` Infelizmente a nave chegou em sua capacidade máxima, e o sexto passageiro teve que sair....`}
+            {shipCapacity <
+              history.location.state.apiData.millFalcon.cargo_capacity &&
+              ` Felizmente a capacidade atual da nave não excedeu o limite, permitindo que o sexto passageiro pudesse viajar tranquilamente....`}
           </p>
         </div>
+      </section>
+
+      <section
+        className="ending"
+        onAnimationEnd={() => {
+          history.push("/");
+        }}
+      >
+        <h2>Obrigado à equipe MERCADOU pela oportunidade.</h2>
+        <p>Att. Marcello Carvalhal Santos</p>
       </section>
     </>
   );

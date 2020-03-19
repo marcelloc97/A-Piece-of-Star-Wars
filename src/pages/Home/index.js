@@ -82,7 +82,7 @@ export default function Home({ history }) {
     setWeight(localStorage.getItem("weight"));
 
     // if they aren't empty, store the input data
-    if (name !== "" && weight !== 0) {
+    if (name !== null && weight !== null) {
       try {
         // try creating a new object
         const newData = {
@@ -92,7 +92,8 @@ export default function Home({ history }) {
         };
 
         // then navigating to /story page passing newData as state
-        history.push("/story", newData);
+        if (name !== "" && weight !== 0) history.push("/story", newData);
+        else return;
       } catch (e) {
         // else, shows the error on console
         console.log(e);
@@ -107,6 +108,7 @@ export default function Home({ history }) {
     localStorage.clear();
     setName("");
     setWeight(0);
+    setHasData(false);
   }
 
   // just the React JSX code

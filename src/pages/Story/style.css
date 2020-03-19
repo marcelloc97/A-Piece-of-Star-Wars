@@ -48,7 +48,7 @@
   top: 99999px;
   opacity: 0;
   transform-origin: 50% 100%;
-  animation: crawl 60s linear 13s;
+  animation: crawl 80s linear 15s;
 }
 
 .crawl > .title {
@@ -59,6 +59,22 @@
 .crawl > .title h1 {
   margin: 0 0 100px;
   text-transform: uppercase;
+}
+
+.ending {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  margin: -350px auto;
+
+  text-align: center;
+  color: #09f;
+  font-size: 175%;
+  font-family: 'Pathway Gothic One', sans-serif;
+  animation: ending 6s ease-out 95s;
+  opacity: 0;
 }
 
 @keyframes intro {
@@ -90,12 +106,28 @@
 @keyframes crawl {
   0% {
     opacity: 1;
-    top: 600px;
+    top: 200px;
     transform: rotateX(20deg)  translateZ(0);
   }
-  100% {
+  99% {
     opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
+@keyframes ending {
+  20% { 
+    opacity: 1; 
+  }
+  90% {
+    opacity: 1;
+  }
+  100% { 
+    opacity: 0;
   }
 }
