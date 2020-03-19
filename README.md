@@ -2,7 +2,12 @@ This project is a Challenge from [Mercadou](https://www.mercadou.com.br/) to app
 
 # Welcome to `A Piece of Star Wars`!
 
-To run this project, just use `git clone https://github.com/marcelloc97/M4rc3ll0C4rv4lh4l.git`
+To run this project, just use `git clone https://github.com/marcelloc97/M4rc3ll0C4rv4lh4l.git`.\
+After it succeed, use `yarn` or `npm install` to install all used dependencies.
+
+Then use [`yarn start` or `npm start`](#yarn-start) to see it in action.
+
+But if you want to see it without downloading this repository, follow [this](https://a-piece-of-sw.herokuapp.com/) link.
 
 ## Available Scripts
 
@@ -25,3 +30,5 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+# Thank you!
