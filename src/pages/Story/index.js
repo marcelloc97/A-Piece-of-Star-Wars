@@ -60,10 +60,9 @@ export default function Story({ history }) {
           </p>
           <br />
           <p>
-            Enquanto isso,
-            {history.location.state.apiData.hanSolo.name} está pilotando a nave
-            {history.location.state.apiData.millFalcon.name} com capacidade de
-            carca de
+            Enquanto isso, {history.location.state.apiData.hanSolo.name} está
+            pilotando a nave {history.location.state.apiData.millFalcon.name}{" "}
+            com capacidade de carca de{" "}
             {history.location.state.apiData.millFalcon.cargo_capacity}
             kg. Sua capacidade atual está ocupada em 99%.
           </p>
@@ -71,10 +70,9 @@ export default function Story({ history }) {
           <p>
             Em um certo momento, Han Solo percebe que está próximo de um planeta
             conhecido. Muda seu curso em direção ao mesmo. Ao pousar, decide
-            embarcar
-            {history.location.state.apiData.millFalcon.passengers} passageiros
-            do filme Uma Nova Esperança. Este sexto passageiro é alguém
-            especial.
+            embarcar {history.location.state.apiData.millFalcon.passengers}{" "}
+            passageiros do filme Uma Nova Esperança. Este sexto passageiro é
+            alguém especial.
           </p>
           <br />
           <p>
