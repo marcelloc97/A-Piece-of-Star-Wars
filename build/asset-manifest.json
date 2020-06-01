@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d60bdee4.chunk.css",
+    "main.js": "/static/js/main.ebe8a5ec.chunk.js",
+    "main.js.map": "/static/js/main.ebe8a5ec.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a21a960b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a21a960b.js.map",
+    "static/js/2.ba9de96f.chunk.js": "/static/js/2.ba9de96f.chunk.js",
+    "static/js/2.ba9de96f.chunk.js.map": "/static/js/2.ba9de96f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.55a58bea0861f9b917ce9e9a62be0b2e.js": "/precache-manifest.55a58bea0861f9b917ce9e9a62be0b2e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.d60bdee4.chunk.css.map": "/static/css/main.d60bdee4.chunk.css.map",
+    "static/js/2.ba9de96f.chunk.js.LICENSE.txt": "/static/js/2.ba9de96f.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/background-stars-desktop_81342104.738e69d7.webp",
+    "static/media/logo.svg": "/static/media/logo.6dcff896.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a21a960b.js",
+    "static/js/2.ba9de96f.chunk.js",
+    "static/css/main.d60bdee4.chunk.css",
+    "static/js/main.ebe8a5ec.chunk.js"
+  ]
+}
