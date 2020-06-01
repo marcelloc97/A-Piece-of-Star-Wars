@@ -17,7 +17,7 @@ export default function Home({ history }) {
 
   const [loading, setLoading] = useState(true); // this for loading data
   const [canAnimate, setCanAnimate] = useState(true); // this to limit animation repeating
-  const [hasData, setHasData] = useState(false); // this to limit animation repeating
+  const [hasData, setHasData] = useState(false); // this to check if has some data loaded
 
   // call a useEffect to load data from API through fetchAPIData
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function Home({ history }) {
       const newData = {
         apiData,
         name,
-        weight
+        weight,
       };
 
       // then navigating to /story page passing newData as state
@@ -88,7 +88,7 @@ export default function Home({ history }) {
         const newData = {
           apiData,
           name,
-          weight: parseFloat(weight)
+          weight: parseFloat(weight),
         };
 
         // then navigating to /story page passing newData as state
@@ -125,7 +125,7 @@ export default function Home({ history }) {
           >
             <h2
               style={{
-                marginBottom: "30px"
+                marginBottom: "30px",
               }}
             >
               BUSCANDO INFORMAÇÕES...
@@ -157,7 +157,7 @@ export default function Home({ history }) {
               <input
                 type="text"
                 datatype="name"
-                onChange={e => setName(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
                 value={name}
                 placeholder="Ex: Marcello"
                 required
@@ -166,7 +166,7 @@ export default function Home({ history }) {
               <input
                 type="number"
                 datatype="weight"
-                onChange={e => setWeight(e.target.valueAsNumber)}
+                onChange={(e) => setWeight(e.target.valueAsNumber)}
                 value={weight}
                 placeholder="Ex: 72"
                 required

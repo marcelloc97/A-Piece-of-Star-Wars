@@ -60,32 +60,31 @@ export default function Story({ history }) {
           </p>
           <br />
           <p>
-            Enquanto isso, {history.location.state.apiData.hanSolo.name} está
-            pilotando a nave {history.location.state.apiData.millFalcon.name}{" "}
-            com capacidade de carca de{" "}
+            Enquanto isso,
+            {history.location.state.apiData.hanSolo.name} está pilotando a nave
+            {history.location.state.apiData.millFalcon.name} com capacidade de
+            carca de
             {history.location.state.apiData.millFalcon.cargo_capacity}
             kg. Sua capacidade atual está ocupada em 99%.
           </p>
           <br />
           <p>
-            Em um certo momento, {history.location.state.apiData.hanSolo.name}{" "}
-            percebe que está próximo de um planeta conhecido. Muda seu curso em
-            direção ao mesmo. Ao pousar, decide embarcar{" "}
+            Em um certo momento, Han Solo percebe que está próximo de um planeta
+            conhecido. Muda seu curso em direção ao mesmo. Ao pousar, decide
+            embarcar
             {history.location.state.apiData.millFalcon.passengers} passageiros
-            do filme {history.location.state.apiData.film.title} (Uma Nova
-            Esperança). Este sexto passageiro é alguém especial.
+            do filme Uma Nova Esperança. Este sexto passageiro é alguém
+            especial.
           </p>
           <br />
           <p>
-            {history.location.state.apiData.hanSolo.name} pergunta o nome do
-            sexto passageiro que responde intitulando-se de{" "}
-            {history.location.state.name}.{" "}
-            {history.location.state.apiData.hanSolo.name} o convida à entrar.
+            Han Solo pergunta o nome do sexto passageiro que responde
+            intitulando-se de {history.location.state.name}. Han Solo o convida
+            à entrar.
           </p>
           <br />
           <p>
-            Com o peso dos passageiros, a{" "}
-            {history.location.state.apiData.millFalcon.name} chegou a{" "}
+            Com o peso dos passageiros, a Millenium Falcon chegou a{" "}
             {shipCapacity}kg.
             {shipCapacity >
               history.location.state.apiData.millFalcon.cargo_capacity &&
