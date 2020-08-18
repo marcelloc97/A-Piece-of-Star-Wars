@@ -2,7 +2,7 @@ This project is a Challenge from [Mercadou](https://www.mercadou.com.br/) to app
 
 # Welcome to `A Piece of Star Wars`!
 
-To run this project, just use `git clone https://github.com/marcelloc97/M4rc3ll0C4rv4lh4l.git`.\
+To run this project, just use `git clone https://github.com/marcelloc97/A-Piece-of-Star-Wars.git`.\
 After it succeed, use `yarn` or `npm install` to install all used dependencies.
 
 Then use [`yarn start` or `npm start`](#yarn-start) to see it in action.
