@@ -115,72 +115,68 @@ export default function Home({ history }) {
   return (
     <section className="container">
       {loading && (
-        <>
-          <Anime
-            autoplay={true}
-            opacity={[0, 1]}
-            translateY={[-50, 0]}
-            duration={500}
-            easing={"easeInOutSine"}
-          >
-            <h2
-              style={{
-                marginBottom: "30px",
-              }}
-            >
-              BUSCANDO INFORMAÇÕES...
-            </h2>
-            <ReactLoading color="yellow" type="spin" />
-          </Anime>
-        </>
-      )}
-      {!loading && (
-        <>
-          <Anime
-            opacity={canAnimate ? [0, 1] : 1}
-            translateY={canAnimate ? [-50, 0] : 0}
-            duration={500}
-            easing={"easeInOutSine"}
-            complete={() => {
-              setCanAnimate(false);
+        <Anime
+          autoplay={true}
+          opacity={[0, 1]}
+          translateY={[-50, 0]}
+          duration={500}
+          easing={"easeInOutSine"}
+        >
+          <h2
+            style={{
+              marginBottom: "30px",
             }}
           >
-            <img src={logo} alt="star wars logo" />
-            {hasData && (
-              <h5 style={{ textAlign: "center", marginBottom: "10px" }}>
-                Existe informação salva em seu computador, pressione{" "}
-                <em>Carregar</em> para carregá-las
-              </h5>
-            )}
-            <form onSubmit={handleData}>
-              <label htmlFor="name">Nome</label>
-              <input
-                type="text"
-                datatype="name"
-                onChange={(e) => setName(e.target.value)}
-                value={name}
-                placeholder="Ex: Marcello"
-                required
-              />
-              <label htmlFor="weight">Peso</label>
-              <input
-                type="number"
-                datatype="weight"
-                onChange={(e) => setWeight(e.target.valueAsNumber)}
-                value={weight}
-                placeholder="Ex: 72"
-                required
-              />
-              <div className="buttonGroup">
-                <button type="submit">Salvar</button>
-                <button onClick={handleLoadData}>Carregar</button>
-              </div>
-              <button onClick={handleWipeData} name="wipe">
-                Limpar dados
-              </button>
-            </form>
-          </Anime>
-        </>
+            BUSCANDO INFORMAÇÕES...
+          </h2>
+          <ReactLoading color="yellow" type="spin" />
+        </Anime>
+      )}
+      {!loading && (
+        <Anime
+          opacity={canAnimate ? [0, 1] : 1}
+          translateY={canAnimate ? [-50, 0] : 0}
+          duration={500}
+          easing={"easeInOutSine"}
+          complete={() => {
+            setCanAnimate(false);
+          }}
+        >
+          <img src={logo} alt="star wars logo" />
+          {hasData && (
+            <h5 style={{ textAlign: "center", marginBottom: "10px" }}>
+              Existe informação salva em seu computador, pressione{" "}
+              <em>Carregar</em> para carregá-las
+            </h5>
+          )}
+          <form onSubmit={handleData}>
+            <label htmlFor="name">Nome</label>
+            <input
+              type="text"
+              datatype="name"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+              placeholder="Ex: Marcello"
+              required
+            />
+            <label htmlFor="weight">Peso</label>
+            <input
+              type="number"
+              datatype="weight"
+              onChange={(e) => setWeight(e.target.valueAsNumber)}
+              value={weight}
+              placeholder="Ex: 72"
+              required
+            />
+            <div className="buttonGroup">
+              <button type="submit">Salvar</button>
+              <button onClick={handleLoadData}>Carregar</button>
+            </div>
+            <button onClick={handleWipeData} name="wipe">
+              Limpar dados
+            </button>
+          </form>
+        </Anime>
       )}
     </section>
   );
